@@ -202,6 +202,18 @@
       var el = sceneElements[i];
       if (el.getAttribute('data-id') === scene.data.id) {
         el.classList.add('current');
+        const audioRemove = document.querySelector('.audio-container audio')
+        const audioContainer = document.querySelector('.audio-container')
+        audioContainer.removeChild(audioRemove)
+        const audio = document.createElement('audio');
+        audio.className="audio";
+        audio.autoplay=true;
+        audio.controls=true;
+        const source = document.createElement('source')
+        const src = "./audio/"+el.getAttribute('data-id')+".mp3";
+        source.src=src;
+        audio.appendChild(source)
+        audioContainer.appendChild(audio)
       } else {
         el.classList.remove('current');
       }
@@ -213,10 +225,15 @@
     for(let i=0;i<sceneList.length;i++)
     {
       const id = sceneList[i].getAttribute('data-id');
-      sceneList[i].style.cssText = "background-image: url('./tiles/"+id+"/preview.jpg');height: 150px;"
+      console.log(id)
+      sceneList[i].style.cssText = "background-image: url('./tiles/"+id+"/preview.jpg');height: 150px; width:100%"
     }
     sceneListElement.classList.add('enabled');
     sceneListToggleElement.classList.add('enabled');
+
+   
+    
+ 
   }
 
   function hideSceneList() {
