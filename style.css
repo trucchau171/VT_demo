@@ -361,16 +361,9 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   left: -100%;
 }
 
-.mobile #sceneList.enabled {
-  margin-left: 100%;
-}
 
 .mobile #sceneList .scenes {
   height: 100%;
-}
-
-#sceneList.enabled {
-  margin-left: 220px;
 }
 
 #sceneList .scene {
@@ -912,4 +905,15 @@ body.view-control-buttons .viewControlButton {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+#sceneList.enabled {
+  margin: 0 0;
+  position: absolute;
+  left: 0px;
+}
+
+.scenes a 
+{
+  width: 100%;
 }
