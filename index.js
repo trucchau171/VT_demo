@@ -398,7 +398,6 @@
   // Map
 
   const locationModal = document.querySelector('.location-modal');
-  const locationClose = document.querySelector('.location-close');
   const locationIcon = document.querySelector('.location-icon');
   function showLocation() {
     locationModal.classList.add('visible');
@@ -407,7 +406,7 @@
     locationModal.classList.toggle('visible');
   }
   locationIcon.addEventListener('click', showLocation);
-  locationClose.addEventListener('click', toggleLocation);
+  locationModal.addEventListener('click', toggleLocation);
   if (locationModal.classList.contains('visible')) {
     stopTouchAndScrollEventPropagation(locationModal);
   }
