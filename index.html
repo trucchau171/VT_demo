@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-cng-chnh">
+        <li class="text">Cổng chính</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-snh-a1">
+        <li class="text">Sảnh A1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-vn-thng-uyn">
+        <li class="text">Vườn thượng uyển</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-hi-sinh-vin">
+        <li class="text">Hội sinh viên</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-tng-7">
+        <li class="text">Tầng 7</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<div class="location_wrapper">
+  <a href="javascript:void(0)" id="location">
+    <img class="location-icon" src="img/location.png">
+  </a>
+  <div class="location-modal">
+    <img class="location-close" src="img/close.png">
+    <iframe class="location_frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.1301454490153!2d106.7991952147722!3d10.877704592252782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d8a46a7297a1%3A0x1fd0a61fa4ef23b0!2zxJDhuqFpIGjhu41jIFF14buRYyBU4bq_LCDEkMO0bmcgSG_DoCwgVGjhu6cgxJDhu6ljLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1651072119150!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </div>
+
+  <div class="audio-container">
+    <audio class="audio" controls autoplay>
+      <source src="./audio/0-main.mp3">
+    Your browser does not support the audio element.
+    </audio>
+  </div>
+
+</div>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
